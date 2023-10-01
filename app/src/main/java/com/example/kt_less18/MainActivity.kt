@@ -44,7 +44,6 @@ class MainActivity: AppCompatActivity() {
         viewModel.getCounterLiveData()
             .observe(this, { counterValue -> clickCounter.text = counterValue.toString() })
     }
-
     override fun onStop() {
         super.onStop()
         val json = gson.toJson(viewModel.getModel())
